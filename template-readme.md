@@ -2,4 +2,4 @@
 
 This is some content
 
-{CONTENT}
+[[INSERT]]
