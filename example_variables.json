@@ -1,5 +1,7 @@
 {
   "NOTION_API_SECRET": "",
   "NOTION_DB": "",
-  "GITHUB": ""
+  "GITHUB": "",
+  "TEMPLATE_PATH": "/template-readme.md",
+  "CONTENT_PLACEHOLDER": ""
 }

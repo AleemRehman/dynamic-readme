@@ -10,17 +10,6 @@ class Builder:
       json = json.loads(values)
       return json['NOTION_API_SECRET'], json['NOTION_DB']
 
-  def load_template():
-    if os.path.exists("template-readme.md"):
-      with open("template-readme.md","r") as template_file:
-        template = template_file.read()
-        if '[[INSERT]]' in template:
-          print("there's a dynamic placeholder")
-        else:
-          print("there's no dynamic placeholder in template")
-
-    print('load the template and ensure it has a dynamic tag')
-  
   def create_table(self, data):
     #convert dict into a markdown table
     if type(data) == dict:
