@@ -2,6 +2,6 @@
   "NOTION_API_SECRET": "",
   "NOTION_DB": "",
   "GITHUB": "",
-  "TEMPLATE_PATH": "/template-readme.md",
+  "TEMPLATE_NAME": "template-readme.md",
   "CONTENT_PLACEHOLDER": ""
 }
