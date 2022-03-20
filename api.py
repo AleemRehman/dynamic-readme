@@ -3,9 +3,10 @@ import json
 
 class api:
   
-  def __init__(self):
-    self.notion_api_secret, self.notion_db = api.set_local_variables()
-    return ''
+  def __init__(self, **kwargs):
+    if kwargs.get('notion_api_secret') and kwargs.get('notion_db'):
+      self.notion_secret = kwargs.get('notion_api_secret')
+      self.notion_db = kwargs.get('notion_db')
 
 
   def grab_info_from_notion():

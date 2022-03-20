@@ -1,7 +1,7 @@
 import os
 import pathlib
-
 root = pathlib.Path(__file__).parent.resolve()
+
 class File:
   def __init__(self):
     return
@@ -12,8 +12,8 @@ class File:
     #   - return a success flag and the contents of the template
     path_name = root
 
-    if type(path_name) == str:
-      path_name = root + path_name
+    if type(template_name) == str:
+      path_name = root + template_name
 
     if os.path.exists(path_name):
       with open(path_name,"r") as template_file:
@@ -24,6 +24,12 @@ class File:
           print("there's no dynamic placeholder in template")
     return
 
+  def set_local_variables():
+    with open("example_variables.json", "r") as variables:
+      values = variables.read()
+      json = json.loads(values)
+      return json['NOTION_API_SECRET'], json['NOTION_DB']
+      
   def write_new_readme(self, new_data):
     # write the new readme with data from the builder
     return

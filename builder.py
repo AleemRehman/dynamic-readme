@@ -4,11 +4,11 @@ import os
 
 class Builder:
   # build the dynamic content
-  def set_local_variables():
-    with open("example_variables.json", "r") as variables:
-      values = variables.read()
-      json = json.loads(values)
-      return json['NOTION_API_SECRET'], json['NOTION_DB']
+
+  def __init__(self, **kwargs):
+    if kwargs.get('notion_api_secret') and kwargs.get('notion_db'):
+      self.notion_secret = kwargs.get('notion_api_secret')
+      self.notion_db = kwargs.get('notion_db')
 
   def create_table(self, data):
     #convert dict into a markdown table
